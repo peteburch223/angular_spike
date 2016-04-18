@@ -1,13 +1,14 @@
-toDoApp.controller('ToDoController', function() {
+angular.module('toDoApp')
+.controller('ToDoController', ["myFactory", function(myFactory) {
   // we can set an attribute like any other JavaScript object
-  this.todos = [{text:"ToDo1", completed:false}, {text:"ToDo2", completed:true}, {text:"ToDo3", completed:false}];
+  var self=this;
+  self.todos = [];
 
-  this.addToDo = function(toDo){
-    console.log(toDo);
-    this.todos.push({text:toDo, completed:false});
-  }
+  self.addToDo = function(toDoText){
+    self.todos.push(new Todo(toDoText));
+  };
 
-  this.removeToDo = function(){
-    this.todos.pop();
-  }
-});
+  self.removeToDo = function(){
+    self.todos.pop();
+  };
+}]);
