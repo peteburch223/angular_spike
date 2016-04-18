@@ -1,5 +1,5 @@
 toDoApp.factory('myFactory', [function(){
-  Todo = function(toDoText){
+  var Todo = function(toDoText){
     this.text = toDoText;
     this.completed = false;
   };
@@ -7,4 +7,8 @@ toDoApp.factory('myFactory', [function(){
     this.completed = true;
   };
   return Todo;
+}]);
+
+toDoApp.factory('ToDoAPI', [function(){
+  return new ToDoAPI();
 }]);
