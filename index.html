@@ -16,6 +16,9 @@
           {{ todo.completed ? "completed" : "not completed" }}
         </li>
       </ul>
+      <input type="text" ng-model="toDoText">
+      <button ng-click="ctrl.addToDo(toDoText)">add to do</button>
+      <button ng-click="ctrl.removeToDo()">remove to do</button>
     </div>
   </body>
 </html>
