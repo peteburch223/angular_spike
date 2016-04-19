@@ -1,0 +1,23 @@
+{
+  "name": "angular_spike",
+  "description": "week 8 challenges",
+  "main": "app/js/app.js",
+  "authors": [
+    "pete & shane"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/peteburch223/angular_spike",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.5"
+  }
+}
